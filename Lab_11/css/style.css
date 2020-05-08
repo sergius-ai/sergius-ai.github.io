@@ -1,0 +1,28 @@
+body {
+  background-color: gray;
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+}
+#gv {
+  margin-left: 10px;
+  display: none;
+}
+#olv {
+  margin-left: 10px;
+  display: none;
+}
+#dv {
+  margin-left: 10px;
+  display: none;
+}
+h5 {
+  width: auto;
+}
+.cop {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 95vh;
+}

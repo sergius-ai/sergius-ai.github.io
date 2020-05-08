@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Lab_11</title>
+  </head>
+  <body>
+    <h1>Вариант 9</h1>
+    <p><h5>Иерархия основных объектов javascript</h5></p>
+    <a id="global" href="#">Window</a>
+    <div id="gv" style="display: none;" class="">
+      frames</br>
+      location</br>
+      history</br>
+      XMLHttpRequest</br>
+      <a id="document" href="#">Document</a></br>
+      <div id="dv">
+        cookie
+      </div>
+      <a id="object language" href="#">Object</a></br>
+      <div id="olv">
+        Number</br>
+        String</br>
+        Boolean</br>
+        Date</br>
+        Math</br>
+        Array</br>
+        Object</br>
+        Error</br>
+      </div>
+    </div>
+    <script type="text/javascript">
+      window.onload= function() {
+        document.getElementById('global').onclick = function() {
+          openbox('gv', this, 'olv');
+          document.getElementById('document').onclick = function() {
+            openbox2('dv', this);
+            return false;
+          };
+          document.getElementById('object language').onclick = function() {
+            openbox2('olv', this);
+            return false;
+          };
+          return false;
+        };
+      };
+      function openbox(gv, global, olv , dv) {
+        var div = document.getElementById(gv);
+        var div2 = document.getElementById(olv);
+        var div3 = document.getElementById(dv);
+        if(div.style.display == 'block') {
+          div.style = "display: none; margin-left: 10px;"
+          div2.style = "display: none; margin-left: 10px;"
+          div3.style = "display: none; margin-left: 10px;"
+        }
+        else {
+          div.style.display = 'block';
+        }
+      }
+      function openbox2(id, global) {
+        var div = document.getElementById(id);
+        if(div.style.display == 'block') {
+          div.style = "display: none; margin-left: 10px;"
+        }
+        else {
+          div.style.display = 'block';
+        }
+      }
+      function openbox3(id, global) {
+        var div = document.getElementById(id);
+        if(div.style.display == 'block') {
+          div.style = "display: none; margin-left: 10px;"
+        }
+        else {
+          div.style.display = 'block';
+        }
+      }
+    </script>
+    <p class="cop">© 2020 Stepanyuk Sergey </p>
+  </body>
+</html>
