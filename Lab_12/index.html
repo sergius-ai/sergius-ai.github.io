@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Lab_12</title>
+  <script type="application/javascript">
+    function doc1() {
+    var http_request = new XMLHttpRequest();
+    try{
+      http_request = new XMLHttpRequest();
+    }catch (e){
+      try{
+        http_request = new ActiveXObject("Msxml2.XMLHTTP");
+      }catch (e) {
+        try{
+          http_request = new ActiveXObject("Microsoft.XMLHTTP");
+        }catch (e){
+          alert("Your browser broke!");
+          return false;
+        }
+      }
+    }
+    var data_file = "1.txt";
+    http_request.onreadystatechange  = function(){
+      if (http_request.readyState == 4  ) {
+        document.getElementById("Name").innerHTML = http_request.responseText;
+      }
+    }
+    http_request.open("GET", data_file, true);
+    http_request.send();
+  }
+    function doc2() {
+    var http_request = new XMLHttpRequest();
+    try{
+      http_request = new XMLHttpRequest();
+    }catch (e){
+      try{
+        http_request = new ActiveXObject("Msxml2.XMLHTTP");
+      }catch (e) {
+        try{
+          http_request = new ActiveXObject("Microsoft.XMLHTTP");
+        }catch (e){
+          alert("Your browser broke!");
+          return false;
+        }
+      }
+    }
+    var data_file = "2.txt";
+    http_request.onreadystatechange  = function(){
+      if (http_request.readyState == 4  ) {
+        document.getElementById("Name").innerHTML = http_request.responseText;
+      }
+    }
+    http_request.open("GET", data_file, true);
+    http_request.send();
+  }
+  </script>
+  </head>
+  <body>
+    <div class="one" id="Name"></div>
+    <div class="duo">
+      <a href="#" onclick="doc1()">фрукты</a>
+      <a href="#" onclick="doc2()">овощи</a>
+    </div>
+  </body>
+</html>
